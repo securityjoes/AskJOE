@@ -2,7 +2,7 @@
 
 ## What is AskJOE?
 AskJoe is a tool that utilizes [OpenAI](https://openai.com/) to assist researchers wanting to use [Ghidra](https://github.com/NationalSecurityAgency/ghidra) as their malware analysis tool. It was based on the [Gepetto](https://github.com/JusticeRage/Gepetto) idea.
-With its capabilities, OpenAI highly simplifys the practice of reverse engineering, allowing researchers to better detect and mitigate threats. 
+With its capabilities, OpenAI highly simplifies the practice of reverse engineering, allowing researchers to better detect and mitigate threats. 
 
 ![AskJOE Running](/imgs/AskJOE-running.png "AskJOE Running")
 
