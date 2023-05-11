@@ -31,10 +31,9 @@ Author: https://twitter.com/charleslomboni | Threat Researcher, Security Joes
 - [Pyhidra](https://github.com/dod-cyber-crime-center/pyhidra)
 - [Python3](https://www.python.org/downloads/)
 
+
 ## Limitations
-```
-OpenAI has a hard limit of 4096 tokens for each API call, so if your text is longer than that, you'll need to split it up. However, OpenAI currently does not support stateful conversations over multiple API calls, which means it does not remember the previous API call.
-```
+> OpenAI has a hard limit of 4096 tokens for each API call, so if your text is longer than that, you'll need to split it up. However, OpenAI currently does not support stateful conversations over multiple API calls, which means it does not remember the previous API call.
 
 
 ## How to install?
