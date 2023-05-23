@@ -10,6 +10,11 @@ The tool is free to use, under the limitations of Github.
 
 Author: https://twitter.com/charleslomboni | Threat Researcher, Security Joes
 
+## Updates - 05/23/2023
+- askChoices added
+- Explain selection added
+- Config file added
+
 ## Updates - 05/11/2023
 - Execute all added
 - Stack String added
@@ -23,7 +28,6 @@ Author: https://twitter.com/charleslomboni | Threat Researcher, Security Joes
 - Simplify code added
 - Set OpenAI answer to comment added
 - Monitor messages added
-
 
 ## Dependencies
 - Requests: `pip install requests`
