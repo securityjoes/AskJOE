@@ -29,7 +29,6 @@ Author: https://twitter.com/charleslomboni | Threat Researcher, Security Joes
 - Set OpenAI answer to comment added
 - Monitor messages added
 
-
 ## Dependencies
 - Requests: `pip install requests`
 - [Ghidra](https://github.com/NationalSecurityAgency/ghidra)
