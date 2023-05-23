@@ -13,7 +13,7 @@ Author: https://twitter.com/charleslomboni | Threat Researcher, Security Joes
 ## Updates - 05/23/2023
 - askChoices added
 - Explain selection added
-- Confg file added
+- Config file added
 
 ## Updates - 05/11/2023
 - Execute all added
