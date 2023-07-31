@@ -236,7 +236,7 @@ def explain_function(address, function_name, decompiled_function, op_explain_cod
 
     open_ai_response = parse_open_ai_response(response)
     set_ghidra_plate_comment(address, open_ai_response)
-    new_function_name = re.search("\"([^\@\[][\S]+)\"|\'([^\@\[][\S]+)\'|could be ([^\@\[][\s]+)",
+    new_function_name = re.search("\"([^\@\[][\S]+)\"|\'([^\@\[][\S]+)\'|ould be ([^\@\[][\s]+)",
                                   open_ai_response).group()
     print_joe_answer(op_explain_code, open_ai_response)
     rename_function(function_name,
