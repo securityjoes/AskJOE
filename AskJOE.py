@@ -7,12 +7,15 @@
 # @menupath Tools.AskJOE
 # @toolbar JOES.png
 
-import json
-import re
 
 import ghidra
 import requests
 import configparser
+import json
+import re
+import struct
+
+from AskJOE_Files.constants import *
 
 # For type checking
 try:
@@ -26,6 +29,7 @@ from ghidra.app.decompiler import DecompInterface
 from ghidra.util.task import ConsoleTaskMonitor
 from ghidra.util.exception import CancelledException
 from ghidra.app.plugin.core.colorizer import ColorizingService
+# For USER_SCRIPTS_DIR
 from ghidra.app.script.GhidraScriptUtil import *
 
 service = state.getTool().getService(ColorizingService)
@@ -149,7 +153,7 @@ def detect_stack_strings(op_stack_strings):
     https://github.com/reb311ion/replica/blob/fede41b9afd2ef5e33c860ce114e8a24193751ac/replica.py#L560
     :return:
     """
-    monitor.setMessage("AskJOE is detecting Stack Strings")
+    monitor.setMessage(f"AskJOE is detecting {op_stack_strings}")
     print_joe_answer(op_stack_strings)
 
     program_list = currentProgram.getListing()
@@ -242,19 +246,61 @@ def explain_function(address, function_name, decompiled_function, op_explain_cod
                     new_function_name.replace('"', '').replace('(', '').replace(')', '').replace('.', ''))
 
 
+def search_xor(op_xor):
+    monitor.setMessage(f"AskJOE is detecting {op_xor}")
+    print_joe_answer(op_xor)
+
+    # Get all instruction from the binary
+    instructions = currentProgram.getListing().getInstructions(True)
+
+    for ins in instructions:
+        mnemonic = ins.getMnemonicString()
+        if "XOR" == mnemonic:
+            operand1 = ins.getOpObjects(0)
+            operand2 = ins.getOpObjects(1)
+
+            # Search for registers
+            if len(operand1) == 1 and len(operand2) == 1:
+                if (isinstance(operand1[0], ghidra.program.model.lang.Register) or
+                        isinstance(operand2[0], ghidra.program.model.lang.Register)):
+                    reg1 = operand1[0].getName()
+                    reg2 = operand2[0].getName()
+
+                    # XOR EAX, EAX is not interesting for us.
+                    # The goal here is search for different registers
+                    if reg1 != reg2:
+                        print(f"[+] Address: {ins.address} - {ins}\n")
+
+            # Search for hex constants
+            if '0x' in str(operand1) or '0x' in str(operand2):
+                print(f"[+] Address: {ins.address} - {ins}\n")
+
+
+def ask_user_prompt(op_prompt):
+    user_prompt = askString("User Prompt", "What would you like to Ask?")
+
+    response = ask_open_ai(user_prompt)
+
+    open_ai_response = parse_open_ai_response(response)
+    print_joe_answer(f"{op_prompt} {user_prompt}", open_ai_response)
+
+
 def ask_joe(function_name, ifc):
     address = function_name.getEntryPoint()
 
     choices = askChoices(
         "AskJOE", "What should JOE do for you?",
-        java.util.ArrayList([0, 1, 2, 3]),
-        java.util.ArrayList(["Explain function", "Explain selection", "Simplify code", "Stack Strings"])
+        java.util.ArrayList([0, 1, 2, 3, 4, 5]),
+        java.util.ArrayList(["Explain function", "Explain selection", "Simplify code", "Stack Strings",
+                             "Search XORs", "User Prompt"])
     )
 
-    op_explain_code = "Explain function."
-    op_explain_selection = "Explain selection."
-    op_simplify_code = "Simplify code."
+    op_explain_code = "Explain Function."
+    op_explain_selection = "Explain Selection."
+    op_simplify_code = "Simplify Code."
     op_stack_string = "Stack Strings."
+    op_xor = "Search XORs."
+    op_prompt = "User Prompt."
 
     decompiled_function = ifc.decompileFunction(function_name, 0, ConsoleTaskMonitor())
 
@@ -269,6 +315,12 @@ def ask_joe(function_name, ifc):
 
     if 3 in choices:
         detect_stack_strings(op_stack_string)
+
+    if 4 in choices:
+        search_xor(op_xor)
+
+    if 5 in choices:
+        ask_user_prompt(op_prompt)
 
 
 def run():
