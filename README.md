@@ -8,7 +8,7 @@ With its capabilities, OpenAI highly simplifies the practice of reverse engineer
 
 The tool is free to use, under the limitations of Github.
 
-Author: https://twitter.com/charleslomboni | Threat Researcher, Security Joes
+Author: https://twitter.com/moval0x1 | Threat Researcher, Security Joes
 
 ## Updates - 07/31/2023
 - Search XOR
