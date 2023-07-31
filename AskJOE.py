@@ -13,9 +13,6 @@ import requests
 import configparser
 import json
 import re
-import struct
-
-from AskJOE_Files.constants import *
 
 # For type checking
 try:
