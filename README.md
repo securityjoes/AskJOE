@@ -10,6 +10,10 @@ The tool is free to use, under the limitations of Github.
 
 Author: https://twitter.com/charleslomboni | Threat Researcher, Security Joes
 
+## Updates - 07/31/2023
+- Search XOR
+- Ask User Prompt (To OpenAI)
+
 ## Updates - 05/23/2023
 - askChoices added
 - Explain selection added
