@@ -56,9 +56,13 @@ Author: https://twitter.com/moval0x1 | Threat Researcher, Security Joes
 > By now, It only supports Linux OS.
 
 ## How to install?
-- Copy the AskJOE files to the ghidra_scripts folder
+Copy the ```AskJOE.py```, ```JOES.png``` and ```AskJOE folder```.
 
-![ghidra_scripts](/imgs/ghidra_scripts_folder.png "ghidra_scripts")
+![ghidra_scripts home](image.png)
+
+Within any of the ```ghidra_scripts``` folders.
+
+![ghidra_scripts folders](/imgs/ghidra_scripts_folders.png "ghidra_scripts")
 
 ## Credits
 Some functions were added in the AskJOE, but we did not create them. Let us give the proper credit.
