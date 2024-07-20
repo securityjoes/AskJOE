@@ -58,11 +58,11 @@ Author: https://twitter.com/moval0x1 | Threat Researcher, Security Joes
 ## How to install?
 Copy the ```AskJOE.py```, ```JOES.png``` and ```AskJOE folder```.
 
-![ghidra_scripts home](image.png)
+![ghidra_scripts home](/imgs/ghidra_scripts_home.png "ghidra_scripts home")
 
 Within any of the ```ghidra_scripts``` folders.
 
-![ghidra_scripts folders](/imgs/ghidra_scripts_folders.png "ghidra_scripts")
+![ghidra_scripts folders](/imgs/ghidra_scripts_folders.png "ghidra_scripts folders")
 
 ## Credits
 Some functions were added in the AskJOE, but we did not create them. Let us give the proper credit.
