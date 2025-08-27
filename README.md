@@ -359,7 +359,6 @@ This project is licensed under the **GPL-2.0 License** - see the [LICENSE](LICEN
 
 ## 🙏 Acknowledgments
 
-- **Original AskJOE Team** for the foundational AI integration
 - **Security Joes** for continued development and support
 - **Open Source Community** for the tools and libraries that make this possible
 - **Threat Intelligence Providers** for their valuable data and services
