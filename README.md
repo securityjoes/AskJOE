@@ -1,9 +1,12 @@
 # AskJOE 2.0 - Advanced Malware Analysis Suite
 
-[![AskJOE](JOES.png)](https://github.com/securityjoes/AskJOE)
+[![GitHub stars](https://img.shields.io/github/stars/securityjoes/AskJOE)](https://github.com/securityjoes/AskJOE/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/securityjoes/AskJOE)](https://github.com/securityjoes/AskJOE/network)
+[![GitHub issues](https://img.shields.io/github/issues/securityjoes/securityjoes/AskJOE)](https://github.com/securityjoes/AskJOE/issues)
+[![License](https://img.shields.io/badge/License-GPL_v2-blue.svg)](LICENSE)
 
-> **Enhanced Ghidra-based malware analysis platform with comprehensive threat intelligence, behavioral analysis, and AI-powered reverse engineering capabilities**
-
+> **AI-Powered Malware Analysis & Threat Intelligence for Ghidra**  
+> Transform your static analysis workflow with cutting-edge AI capabilities, comprehensive malware detection, and advanced threat intelligence.
 ## 🚀 What is AskJOE 2.0?
 
 AskJOE 2.0 is an evolution of the original [AskJOE project](https://github.com/securityjoes/AskJOE), transforming it from a single AI-powered function analyzer into a comprehensive malware analysis suite. Built on the foundation of Ghidra and OpenAI integration, this enhanced version adds 8 specialized analysis modules that provide deep insights into malware behavior, threat intelligence, and reverse engineering analysis.
