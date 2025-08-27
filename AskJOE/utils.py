@@ -3,6 +3,7 @@ import struct
 
 
 def pack_constant(const):
+    """Pack constant value into byte array"""
     byte_array = []
     if const["size"] == "B":
         byte_array = const["array"]

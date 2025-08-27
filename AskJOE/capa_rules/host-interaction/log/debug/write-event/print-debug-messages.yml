@@ -1,0 +1,18 @@
+rule:
+  meta:
+    name: print debug messages
+    namespace: host-interaction/log/debug/write-event
+    authors:
+      - michael.hunhoff@mandiant.com
+    scopes:
+      static: function
+      dynamic: call
+    examples:
+      - 493167E85E45363D09495D0841C30648:0x401000
+  features:
+    - or:
+      - api: DbgPrint
+      - api: kernel32.OutputDebugString
+      - and:
+        - os: android
+        - api: __android_log_print
