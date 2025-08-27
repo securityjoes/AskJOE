@@ -2,16 +2,15 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/securityjoes/AskJOE)](https://github.com/securityjoes/AskJOE/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/securityjoes/AskJOE)](https://github.com/securityjoes/AskJOE/network)
-[![GitHub issues](https://img.shields.io/github/issues/securityjoes/securityjoes/AskJOE)](https://github.com/securityjoes/AskJOE/issues)
 [![License](https://img.shields.io/badge/License-GPL_v2-blue.svg)](LICENSE)
 
 > **AI-Powered Malware Analysis & Threat Intelligence for Ghidra**  
 > Transform your static analysis workflow with cutting-edge AI capabilities, comprehensive malware detection, and advanced threat intelligence.
-## 🚀 What is AskJOE 2.0?
+##  What is AskJOE 2.0?
 
 AskJOE 2.0 is an evolution of the original [AskJOE project](https://github.com/securityjoes/AskJOE), transforming it from a single AI-powered function analyzer into a comprehensive malware analysis suite. Built on the foundation of Ghidra and OpenAI integration, this enhanced version adds 8 specialized analysis modules that provide deep insights into malware behavior, threat intelligence, and reverse engineering analysis.
 
-### ✨ Evolution from AskJOE 1.0
+###  Evolution from AskJOE 1.0
 
 **Original AskJOE Features:**
 - AI-powered function analysis using OpenAI
@@ -29,7 +28,7 @@ AskJOE 2.0 is an evolution of the original [AskJOE project](https://github.com/s
 - **Configurable Analysis Pipeline** with rate limiting
 - **Professional-grade Output** with detailed threat assessments
 
-## 🛠️ Core Analysis Modules
+##  Core Analysis Modules
 
 ### 1. **AI Triage Analysis** (`01_AI_Triage_Analysis.py`)
 - **Purpose**: Initial malware assessment using AI analysis
@@ -106,37 +105,7 @@ AskJOE 2.0 is an evolution of the original [AskJOE project](https://github.com/s
   - **Rate Limiting & Error Handling** for robust API integration
   - **Detailed Logging & Debugging** capabilities
 
-## 🔧 Technical Features
-
-### **Enhanced Configuration System**
-- **Centralized Configuration** (`config.ini`)
-- **API Key Management** for all intelligence services
-- **Rate Limiting Controls** to prevent API abuse
-- **Feature Toggles** for enabling/disabling specific services
-- **Logging Configuration** with customizable formats
-
-### **Advanced Logging & Monitoring**
-- **Structured Logging** with multiple log levels
-- **Service Status Tracking** for all intelligence sources
-- **Performance Monitoring** and error reporting
-- **Debug Information** for troubleshooting
-- **Comprehensive Audit Trail**
-
-### **Robust Error Handling**
-- **Graceful Degradation** when services fail
-- **Retry Mechanisms** for transient failures
-- **Fallback Strategies** for critical analysis
-- **User-friendly Error Messages**
-- **Detailed Debug Information**
-
-### **Professional Output Formatting**
-- **Structured Analysis Reports**
-- **Threat Level Classifications** (CRITICAL, HIGH, MEDIUM, LOW)
-- **Comprehensive Threat Assessments**
-- **Hunting Guidance** with direct links to intelligence sources
-- **Clickable Addresses** for Ghidra navigation
-
-## 🚀 Installation & Setup
+##  Installation & Setup
 
 ### **Prerequisites**
 ```bash
@@ -154,30 +123,7 @@ pip install requests openai flare-capa
 4. **Enable Features** as needed in configuration
 5. **Run Scripts** from Ghidra's Script Manager
 
-### **Configuration Example**
-```ini
-[API_KEYS]
-virustotal_api_key = YOUR_VT_API_KEY
-hybrid_analysis_api_key = YOUR_HA_API_KEY
-alienvault_api_key = YOUR_OTX_API_KEY
-malware_bazaar_api_key = YOUR_MB_API_KEY
-intezer_api_key = YOUR_INTEZER_API_KEY
-anyrun_api_key = YOUR_ANYRUN_API_KEY
-triage_api_key = YOUR_TRIAGE_API_KEY
-xforce_api_key = YOUR_XFORCE_API_KEY
-
-[FEATURES]
-enable_virustotal = true
-enable_hybrid_analysis = true
-enable_alienvault = true
-enable_malware_bazaar = true
-enable_intezer = true
-enable_anyrun = true
-enable_triage = true
-enable_xforce = true
-```
-
-## 📊 Usage Examples
+##  Usage Examples
 
 ### **Comprehensive Malware Analysis Workflow**
 ```python
@@ -190,118 +136,7 @@ enable_xforce = true
 # 7. Complete with Threat Intelligence Analyzer
 ```
 
-### **Threat Intelligence Analysis Output**
-```
-================================================================================
-COMPREHENSIVE THREAT INTELLIGENCE ANALYSIS RESULTS
-================================================================================
-Threat Level: CRITICAL
-Detection Rate: 54/Unknown
-Detection Percentage: 100.0%
-File Hash: 5bde316bb02a4d1c0e5530093c04f48e6bb862a828f154b5ad2a19c3a032937d
-Sources Queried: 3/8
-
-[SERVICE STATUS SUMMARY]
-  [SUCCESS] VirusTotal: 54 detections
-  [SUCCESS] Hybrid Analysis: verdict: malicious
-  [SUCCESS] AlienVault: 0 pulses
-  [FAILED] Malware Bazaar: API error: 404
-  Summary: 3/8 services successful
-
-=== COMPREHENSIVE THREAT ASSESSMENT ===
-  [SANDBOX VERDICTS] malicious
-  [THREAT TAGS] assembly, calls-wmi, checks-cpu-name, detect-debug-environment
-  File Type: Win32 EXE
-  File Size: 250504 bytes
-```
-
-## 🔍 Key Capabilities
-
-### **Malware Family Detection**
-- **Multi-source Family Identification** from 9 intelligence services
-- **Behavioral Pattern Recognition** using sandbox analysis
-- **Threat Tag Aggregation** across all sources
-- **Comprehensive Family Mapping** with confidence scoring
-
-### **Advanced Behavioral Analysis**
-- **Sandbox Integration** with Hybrid Analysis and Any.Run
-- **Process Behavior Monitoring** and analysis
-- **Network Activity Tracking** and C2 detection
-- **File System Changes** and persistence analysis
-
-### **Intelligence Correlation**
-- **Cross-source Data Validation** for accuracy
-- **Threat Level Calculation** based on multiple factors
-- **Risk Assessment** with actionable recommendations
-- **Hunting Guidance** with direct intelligence links
-
-## 🎯 Use Cases
-
-### **Incident Response**
-- **Rapid Malware Assessment** and classification
-- **Threat Intelligence Gathering** for containment
-- **Behavioral Analysis** for eradication planning
-- **Comprehensive Reporting** for stakeholders
-
-### **Malware Research**
-- **Deep Code Analysis** and reverse engineering
-- **Family Classification** and attribution
-- **Behavioral Pattern** identification
-- **Threat Landscape** analysis
-
-### **Security Operations**
-- **Automated Analysis** workflows
-- **Threat Hunting** and investigation
-- **Intelligence Sharing** and collaboration
-- **Risk Assessment** and prioritization
-
-## 🔧 Advanced Configuration
-
-### **Rate Limiting & Performance**
-```ini
-[CONFIGURATION]
-api_timeout = 30
-api_rate_limit_delay = 1
-max_retries = 3
-```
-
-### **Analysis Parameters**
-```ini
-[STACK_STRINGS]
-min_string_length = 4
-max_string_length = 100
-min_entropy = 3.0
-validation_ratio = 0.7
-```
-
-### **Logging Configuration**
-```ini
-[LOGGING]
-log_level = INFO
-log_format = %%(asctime)s - %%(name)s - %%(levelname)s - %%(message)s
-log_file = AskJOE_analysis.log
-```
-
-## 🚨 Troubleshooting
-
-### **Common Issues & Solutions**
-
-**API Key Errors:**
-- Verify all API keys in `config.ini`
-- Check API key permissions and quotas
-- Ensure proper endpoint URLs
-
-**Service Failures:**
-- Review service status in output
-- Check network connectivity
-- Verify API service availability
-
-**Performance Issues:**
-- Adjust rate limiting parameters
-- Monitor API quotas
-- Check system resources
-
-## 🤝 Contributing
+## Contributing
 
 ### **Development Guidelines**
 - **Maintain Compatibility** with Ghidra and PyGhidra
@@ -315,22 +150,7 @@ log_file = AskJOE_analysis.log
 - **Add Export Formats** for integration with other tools
 - **Enhance UI/UX** for better user experience
 
-## 📈 Roadmap
-
-### **Planned Enhancements**
-- **Machine Learning Integration** for improved detection
-- **Additional Sandbox Services** for broader coverage
-- **Real-time Intelligence Feeds** for live threat data
-- **Collaborative Analysis** features for team workflows
-- **Advanced Reporting** with customizable templates
-
-### **Integration Opportunities**
-- **SIEM Integration** for automated analysis
-- **Threat Intelligence Platforms** for data sharing
-- **Incident Response Tools** for workflow automation
-- **Security Orchestration** platforms for process integration
-
-## 📚 References & Resources
+##  References & Resources
 
 ### **Original AskJOE Project**
 - [AskJOE Repository](https://github.com/securityjoes/AskJOE)
@@ -353,17 +173,17 @@ log_file = AskJOE_analysis.log
 - [Mandiant CAPA](https://github.com/mandiant/capa)
 - [OpenAI API](https://platform.openai.com/)
 
-## 📄 License
+##  License
 
 This project is licensed under the **GPL-2.0 License** - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - **Security Joes** for continued development and support
 - **Open Source Community** for the tools and libraries that make this possible
 - **Threat Intelligence Providers** for their valuable data and services
 
-## 📞 Support & Contact
+##  Support & Contact
 
 - **GitHub Issues**: Report bugs and request features
 - **Security Joes**: [https://securityjoes.com/](https://securityjoes.com/)
@@ -371,7 +191,5 @@ This project is licensed under the **GPL-2.0 License** - see the [LICENSE](LICEN
 
 ---
 
-**AskJOE 2.0** - Transforming malware analysis through AI, intelligence, and automation. 🚀
-
-*Built with ❤️ by the Security Joes team and the open source community.*
+**AskJOE 2.0** - Transforming malware analysis through AI, intelligence, and automation. 
 
